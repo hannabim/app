@@ -7,5 +7,6 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <SearchEngine />
+  <a href="https://github.com/hannabim/app">Open-sourced code </a>
   </StrictMode>
 );

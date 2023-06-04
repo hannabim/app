@@ -36,6 +36,7 @@
   height: 64px;
   margin-right: 10px;
   float: left;
+  width: 64px;
 }
 .Weather .unit {
   color: #6e5773;
@@ -43,6 +44,5 @@
   font-weight: 400px;
   position: relative;
   top: -34px;
-  margin-left: 5px;
   line-height: 1;
 }

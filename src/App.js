@@ -8,7 +8,7 @@ export default function App() {
     <StrictMode>
       <SearchEngine />
     <footer>
-      <a href="https://github.com/hannabim/app" target="_blank">Open-sourced code </a>
+      <a href="https://github.com/hannabim/app" target="_blank" rel="noreferrer">Open-sourced code </a>
     </footer>
     </StrictMode>
   );

@@ -1,27 +1,32 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
 import SearchEngine from "./SearchEngine";
-import Weather from "./Weather";
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-export default function App() {
-  root.render(
-    <div className="App">
-      <div className="container">
-        <StrictMode>
-          <SearchEngine />
-          <Weather />
-          <footer>
-            <a
-              href="https://github.com/hannabim/app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open-sourced code{" "}
-            </a>
-          </footer>
-        </StrictMode>
-      </div>
+import "./Weather.css";
+
+export default function Weather() {
+  return (
+    <div className="Weather">
+      <SearchEngine />
+      <h1>Lisbon</h1>
+      <ul>
+        <li>Wednesday 17:00</li>
+        <li>Mostly cloudy</li>
+        <div className="row">
+          <div className="col-6">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="mostly cloudy"
+            />
+            6°C
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>Precipitation: 15%</li>
+              <li>Humidity: 72%</li>
+              <li>Wind: 12 km/h</li>
+            </ul>
+          </div>
+        </div>
+      </ul>
     </div>
   );
 }

@@ -18,6 +18,7 @@ export default function SearchEngine() {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
+      description: response.data.weather[0].description,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -51,10 +52,10 @@ export default function SearchEngine() {
     return (
       <div className="Weather">
         {form}
-        <h1>{city}</h1>
+        <h1 className="text-capitalize">{city}</h1>
         <ul>
           <li>Wednesday 17:00</li>
-          <li>Mostly cloudy</li>
+          <li className="text-capitalize">{weather.description}</li>
           <div className="row">
             <div className="col-6">
               <img src={weather.icon} alt="mostly cloudy" />
@@ -65,7 +66,6 @@ export default function SearchEngine() {
             </div>
             <div className="col-6">
               <ul>
-                <li>Precipitation: {weather.precipitation}%</li>
                 <li>Humidity:{weather.humidity}%</li>
                 <li>Wind: {Math.round(weather.wind)} km/h</li>
               </ul>

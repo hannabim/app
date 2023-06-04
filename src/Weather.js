@@ -1,9 +1,11 @@
 import React from "react";
+import SearchEngine from "./SearchEngine";
 import "./Weather.css";
 
 export default function Weather() {
   return (
     <div className="Weather">
+      <SearchEngine />
       <h1>Lisbon</h1>
       <ul>
         <li>Wednesday 17:00</li>

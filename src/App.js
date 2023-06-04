@@ -5,11 +5,16 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 export default function App() {
   root.render(
+    <div className="App">
+    <div className="container">  
     <StrictMode>
       <SearchEngine />
     <footer>
       <a href="https://github.com/hannabim/app" target="_blank" rel="noreferrer">Open-sourced code </a>
     </footer>
     </StrictMode>
+    </div>
+    </div>
+  
   );
 }

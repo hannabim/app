@@ -9,8 +9,8 @@ export default function App() {
     <div className="App">
       <div className="container">
         <StrictMode>
-          <Weather />
           <SearchEngine />
+          <Weather />
           <footer>
             <a
               href="https://github.com/hannabim/app"

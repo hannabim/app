@@ -32,6 +32,7 @@ export default function SearchEngine() {
             <input
               type="search"
               placeholder="Type a city"
+autoFocus="on"
               onChange={ChangeCity}
             />
           </div>

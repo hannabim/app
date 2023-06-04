@@ -7,7 +7,9 @@ export default function App() {
   root.render(
     <StrictMode>
       <SearchEngine />
-      <a href="https://github.com/hannabim/app">Open-sourced code </a>
+    <footer>
+      <a href="https://github.com/hannabim/app" target="_blank">Open-sourced code </a>
+    </footer>
     </StrictMode>
   );
 }

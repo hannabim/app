@@ -27,8 +27,22 @@ export default function SearchEngine() {
     <div className="Search">
       Weather app
       <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Type a city" onChange={ChangeCity} />
-        <button type="submit"> Search </button>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Type a city"
+              onChange={ChangeCity}
+            />
+          </div>
+          <div className="col-3">
+            {" "}
+            <button type="submit" className="btn btn-primary">
+              {" "}
+              Search{" "}
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

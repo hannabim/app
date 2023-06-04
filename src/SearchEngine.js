@@ -25,7 +25,7 @@ export default function SearchEngine() {
   }
   let form = (
     <div className="Search">
-      <h1>Weather app</h1>
+      Weather app
       <form onSubmit={handleSubmit}>
         <input type="search" placeholder="Type a city" onChange={ChangeCity} />
         <button type="submit"> Search </button>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
@@ -63,10 +64,7 @@ export default function SearchEngine() {
           <div className="row">
             <div className="col-6">
               <img src={weather.icon} alt="mostly cloudy" />
-              <span className="temperature">
-                {Math.round(weather.temperature)}
-              </span>
-              <span className="unit">°C</span>
+              <WeatherTemperature celsius={Math.round(weather.temperature)} />
             </div>
             <div className="col-6">
               <ul>

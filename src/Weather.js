@@ -23,6 +23,7 @@ export default function SearchEngine() {
     setWeather({
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
+      coord: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -75,7 +76,7 @@ export default function SearchEngine() {
             </div>
           </div>
         </ul>
-        <WeatherForecast />
+        <WeatherForecast coord={weather.coord} />
       </div>
     );
   } else {

@@ -13,21 +13,20 @@ export default function SearchEngine() {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "35508be96ee4e5cd4520c32d236240eb";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    let apiKey = "599abtb07236d08d64676o3f61450582";
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(url).then(displayWeather);
   }
 
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
-      date: new Date(response.data.dt * 1000),
-      description: response.data.weather[0].description,
-      coord: response.data.coord,
-      temperature: response.data.main.temp,
+      date: new Date(response.data.time * 1000),
+      description: response.data.condition.description,
+      temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      humidity: response.data.temperature.humidity,
+      icon: response.data.condition.icon_url,
     });
   }
   let form = (
@@ -65,7 +64,7 @@ export default function SearchEngine() {
           <li className="text-capitalize">{weather.description}</li>
           <div className="row">
             <div className="col-6">
-              <img src={weather.icon} alt="mostly cloudy" />
+              <img src={weather.icon} alt="current weather icon" />
               <WeatherTemperature celsius={Math.round(weather.temperature)} />
             </div>
             <div className="col-6">

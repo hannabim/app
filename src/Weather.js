@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import WeatherForecast from "./WeatherForecast";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 export default function SearchEngine() {
@@ -74,6 +75,7 @@ export default function SearchEngine() {
             </div>
           </div>
         </ul>
+        <WeatherForecast />
       </div>
     );
   } else {

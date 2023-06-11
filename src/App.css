@@ -7,3 +7,12 @@
   font-size: 11px;
   margin: 10px 0;
 }
+a {
+  color: #5585b5;
+  font-style: italic;
+  text-decoration: none;
+}
+a:hover {
+  color: #53a8b6;
+  background-color: #bbe4e9;
+}

@@ -19,10 +19,9 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let apiKey = "35508be96ee4e5cd4520c32d236240eb";
-    let lon = props.coord.lon;
-    let lat = props.coord.lat;
-    let url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    let apiKey = "599abtb07236d08d64676o3f61450582";
+    let url = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}`;
+
     axios.get(url).then(handleResponse);
     return null;
   }

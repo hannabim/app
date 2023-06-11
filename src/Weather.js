@@ -64,7 +64,7 @@ export default function SearchEngine() {
           <li>
             <FormattedDate date={weather.date} />
           </li>
-          <li className="text-capitalize">{weather.description}</li>
+          <li className="text-capitalize description">{weather.description}</li>
           <div className="row">
             <div className="col-6">
               <img src={weather.icon} alt="current weather icon" />

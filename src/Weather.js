@@ -76,7 +76,7 @@ export default function SearchEngine() {
             </div>
           </div>
         </ul>
-        <WeatherForecast coord={weather.coord} />
+        <WeatherForecast city={city} />
       </div>
     );
   } else {

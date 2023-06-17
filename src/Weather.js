@@ -5,7 +5,7 @@ import WeatherForecast from "./WeatherForecast";
 import FormattedDate from "./FormattedDate";
 import SearchEngine from "./Searchengine"
 import WeatherTemperature from "./WeatherTemperature";
- const [loaded, setLoaded] = useState(false);
+ //const [loaded, setLoaded] = useState(false);
 export default function Weather(props){
    //useEffect(() => {
  // setLoaded(false);

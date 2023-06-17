@@ -1,11 +1,10 @@
-import React{UseState, UseEffect} from react;
+import React,{useState} from "react";
+import Weather from "./Weather";
 export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
- useEffect(() => {
-  setLoaded(false);
- }, []);
+
   function ChangeCity(event) {
     setCity(event.target.value);
   }
@@ -27,3 +26,4 @@ export default function SearchEngine() {
       icon: response.data.condition.icon_url,
     });
   }
+<Weather 

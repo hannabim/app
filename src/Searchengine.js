@@ -25,5 +25,6 @@ export default function SearchEngine() {
       humidity: response.data.temperature.humidity,
       icon: response.data.condition.icon_url,
     });
+  
+<Weather data ="city"/>
   }
-<Weather 

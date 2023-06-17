@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherForecast from "./WeatherForecast";
@@ -8,9 +8,9 @@ export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
-  useEffect(() => {
-   setLoaded(false);
-  }, [city]);
+//  useEffect(() => {
+  // setLoaded(false);
+ // }, [city]);
   function ChangeCity(event) {
     setCity(event.target.value);
   }

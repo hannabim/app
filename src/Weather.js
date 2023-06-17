@@ -10,7 +10,7 @@ export default function SearchEngine() {
   let [weather, setWeather] = useState({});
   useEffect(() => {
    setLoaded(false);
-  }, [handleSubmit]);
+  }, [onSubmit]);
   function ChangeCity(event) {
     setCity(event.target.value);
   }

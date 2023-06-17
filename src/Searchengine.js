@@ -26,5 +26,4 @@ export default function SearchEngine() {
       icon: response.data.condition.icon_url,
     });
   
-<Weather city ={city}/>
-  
+<Weather city ={city}/>}

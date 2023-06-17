@@ -8,9 +8,9 @@ export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
-  // useEffect(() => {
-   // setLoaded(false);
- // }, [city,handleSubmit]);
+  useEffect(() => {
+   setLoaded(false);
+  }, [handleSubmit]);
   function ChangeCity(event) {
     setCity(event.target.value);
   }

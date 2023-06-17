@@ -1,9 +1,15 @@
 import React,{useState} from "react";
 import Weather from "./Weather";
+import axios from "axios";
+import WeatherForecast from "./WeatherForecast";
+import FormattedDate from "./FormattedDate";
+import SearchEngine from "./Searchengine"
+import WeatherTemperature from "./WeatherTemperature";
 export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
+  let defaultcity="Kiev";
 
   function ChangeCity(event) {
     setCity(event.target.value);
@@ -77,7 +83,7 @@ export default function SearchEngine() {
   } else {
     return (  <div className="Weather">
         {form}
-        <h1 className="text-capitalize">{Kiev}</h1>
+        <h1 className="text-capitalize">{defaultcity}</h1>
         <ul>
           <li>
             <FormattedDate date={weather.date} />
@@ -96,7 +102,7 @@ export default function SearchEngine() {
             </div>
           </div>
         </ul>
-        <WeatherForecast city={Kiev} />
+        <WeatherForecast city={defaultcity} />
       </div>);
   }
 }

@@ -27,4 +27,4 @@ export default function SearchEngine() {
     });
   
 <Weather city ={city}/>
-  }
+  

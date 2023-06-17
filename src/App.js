@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./App.css";
+import SearchEngine from "./Searchengine";
 
 import Weather from "./Weather";
 const rootElement = document.getElementById("root");
@@ -10,7 +11,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <StrictMode>
-          <Weather />
+          <SearchEngine />
           <footer>
             <a
               href="https://github.com/hannabim/app"

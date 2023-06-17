@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherForecast from "./WeatherForecast";
 import FormattedDate from "./FormattedDate";
 import SearchEngine from "./Searchengine"
 import WeatherTemperature from "./WeatherTemperature";
+export default function Weather(props){
+   useEffect(() => {
+  setLoaded(false);
+ }, [props.city]);
   let form = (
     <div className="Search">
       <form onSubmit={handleSubmit}>
@@ -57,4 +61,5 @@ import WeatherTemperature from "./WeatherTemperature";
   } else {
     return form;
   }
+}
 }

@@ -4,7 +4,7 @@ import "./Weather.css";
 import WeatherForecast from "./WeatherForecast";
 import WeatherInfo from "./WeatherInfo";
 export default function Weather(props) {
-  const [city, setCity] = useState(props.defaultcity);
+  const [city, setCity] = useState(props.city);
   const [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
   function ChangeCity(event) {
@@ -29,6 +29,8 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
       icon: response.data.condition.icon_url,
+      city: response.data.city,
+      coordinates: response.data.coordinates,
     });
   }
   let form = (
@@ -58,8 +60,8 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         {form}
-        <WeatherInfo info={weather} />
-        <WeatherForecast city={city} />
+        <WeatherInfo weather={weather} />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
